@@ -7,9 +7,9 @@ DataTypes availables:
 3. TINYINT to manage boolean types in the backend: 0=false, 1=true
 4. INT for integers (obvious!)
 5. DATETIME accepting this only syntax yyyy/mm/dd hh:mm:ss. Example: '2021/01/26 08:10:50'. I don't manage PM or AM syntax
-6. TIME(3) for time hh:mm:ss. Example: '08:10:50'. I don't manage PM or AM syntax
+6. TIME(3) for time hh:mm:ss. Example: '08:10:50.123'. I don't manage PM or AM syntax
 7. VARCHAR(6) for hexadecimal colour avoiding the # symbol, just the 6 values
-8. NUMERIC(18,3) for decimal values. Se hizo una prueba para pasar 3 valores de la coma y no funciono, solo entran 2, aun cuando en el back end ponga 1.789M. La falla parece ser en Dapper
+8. NUMERIC(24,6) for decimal values. NUMERIC is better than DECIMAL by one tiny advantage. The maximum precision number is 38, and it seems that the scale can scale up to that number, 38.
 
 Rules:
 1. All the tables must have 1 and just 1 primary key (PK) and has to be [int] IDENTITY(1,1) NOT NULL. Does not matter your personal convention, you must put a PK.
