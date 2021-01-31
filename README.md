@@ -1,6 +1,35 @@
 # CompartoLoQueSe
 
-## Las capas de una pagina/app web
+## Los tipos de datos y reglas de caracter estandar en MS SQL Server (31/01/2021)
+DataTypes availables:
+1. VARCHAR(N) where N can be any number, it depends the clients requirements
+2. VARCHAR(MAX) for textarea tags, Rich Text Editors, files location like .jpg or .exe, URLs, passwords, tags/chips/multi select dropdowns/options separated with ;, or any kind of large string
+3. TINYINT to manage boolean types in the backend: 0=false, 1=true
+4. INT for integers (obvious!)
+5. DATETIME accepting this only syntax yyyy/mm/dd hh:mm:ss. Example: '2021/01/26 08:10:50'. I don't manage PM or AM syntax
+6. TIME(3) for time hh:mm:ss. Example: '08:10:50'. I don't manage PM or AM syntax
+7. VARCHAR(6) for hexadecimal colour avoiding the # symbol, just the 6 values
+8. NUMERIC(18,3) for decimal values. Se hizo una prueba para pasar 3 valores de la coma y no funciono, solo entran 2, aun cuando en el back end ponga 1.789M. La falla parece ser en Dapper
+
+Rules:
+1. All the tables must have 1 and just 1 primary key (PK) and has to be [int] IDENTITY(1,1) NOT NULL. Does not matter your personal convention, you must put a PK.
+2. All the tables and fields must be named in PascalCase notation, not camelCase either UPPERCASE or lowercase. This is made to make more readable that two objects.
+3. All the fields of the tables don't need any kind of prefix to identify them because in any kind of DB operation the table name appears. The only field that need a prefix is the PK of the table because the word "Id" is reserved in MS SQL Server, so if your table is named as Product, your PK has to be named as ProductId.
+4. Avoid using conventions like IntAge or VCName (Varchar). There is no need to do this because the back-end identifies easily all datatype.
+5. In the case of foreign keys (FK), these must be the same as their referenced PK. Example: TableA/TableAId is PK and TableB/TableAId is FK of TableA/TableAId
+6. A PK must be unique in the DB. You can't have TableA/TableAId and TableB/TableAId.
+7. Avoid using reserved words from MS SQL Server like user, password or view. This have to be a must although you can use brackets to avoid this problem.
+8. In case of fields that contains grouped information use plural nouns like TechnologiesUsed. Also, the grouped information has to be separated by ;. 
+9. In the case of boolean fields, avoid simple nouns, instead, use questions like HasHusband or IsMarried. Also, avoid negative expressions like IsNotMarried, you might be confused in some cases.
+10. All tables must have 1 TINYINT field to make logical deletions.
+11. All tables must have 4 fields for audit: 1 field to know who made the new register, 1 field to know who changed the register, 1 field to know when was made the new register and 1 field to know when was modified the register.
+12.  If we have 3 tables represented like this: A -> B <- C, and table A is more important than table C, table B can be named as AC
+13. Stored procedures (SPs) must have the following syntax in their names: [Table.Action]. This make more readable the SPs listing.
+14. The unique scheme that can be used in the DBs is: dbo
+
+Si, esta en ingles, cuando pueda lo paso al español. Saludos!
+
+## Las capas de una pagina/app web (30/01/2021)
 
 Una app web esta compuesta por 2 grandes capas segun los desarrolladores:
 - El front-end: Lo que el usuario ve en sus pantallas del celular, computadora, tablets, etc.
