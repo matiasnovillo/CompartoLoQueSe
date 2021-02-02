@@ -1,5 +1,17 @@
 # CompartoLoQueSe
 
+## ¿Qué debo saber antes del desarrollo web multiplataforma? (02/02/2021)
+Pregunta hecha en Quora y que respondi, la cual comparto por aca tambien.
+
+Hola, cómo te va? 
+Te puedo dar tips sobre eso para que tengas en cuenta y lo busques en Google, acá voy:
+1.  El desarrollo web multiplataforma se basa en el paradigma "programación por capas" y en el paradigma "programación por componentes". Ambos paradigmas hacen que tu aplicación/sistema web pueda ser fácilmente leído, monitoreado y cambiado ante diferentes escenarios. ¿Para qué? Te ahorrará tiempo y dinero. 
+2. El desarrollo web multiplataforma, y en realidad cualquier desarrollo informático necesita de principios de programación como KISS (Keep it simple, stupid) o el SOLID. Estos principios van muy de la mano con los paradigmas mencionados anteriormente.
+3. La palabra API, el diseño responsive y el diseño PWA son palabras que explican como una aplicación/sistema web debe adaptarse a diferentes escenarios como: 1. El usuario que visita tu página desde un browser de Windows. 2. El usuario que visita tu página desde una tablet. 3. El usuario que visita tu página desde un celular. 4. El usuario que visita tu negocio desde una app Android o iPhone. 5. El usuario que quiere consumir tus APIs a través de interfaces distintas a las usuales como entrar al Google Chrome (este generalmente es también un desarrollador o comerciante).
+4. Si empiezas desde 0% o 25% en la programación te recomiendo que aprendas de las buenas prácticas de desarrollo (BPD) como primer objetivo. Cuando hablo de las BPD me refiero a aprender primero de los estándares que hay en cada fase del desarrollo web, hay un estándar para el modelado de bases de datos, hay un estandar para el desarrollo de APIs, hay un estándar incluso para cómo debes escribir tu código.
+5. Segundo paso: Aprende a usar Git y GitHub, no se en que parte del camino estás pero te aconsejo que lo aprendas si no lo sabes. Después de usarlo un tiempo llegue a la conclusión de que es una especie de copy paste más poderoso que el Ctrl + C y Ctrl + V. Hay memes que muestran a Git como el autito que te permitr volver al pasado y cambiar cosas en tu código mal hecho, ya me viene salvando las papas 4 veces con mis códigos. Por otro lado GitHub es un lugar donde vas a ver la rueda ya inventada, cualquier proyecto informático que quieras incursionar ya esta en GitHub de forma gratuita para que lo uses a tu favor (busca los que tengan licencia Apache o MIT, preferiblemente). Además, ahí podrás hacer desarrollo colaborativo con personas de cualquier lado del mundo.
+Cualquier cosa hablame para más tips, saludos desde Argentina! 
+
 ## Los tipos de datos y reglas de caracter estandar en MS SQL Server (31/01/2021)
 DataTypes availables:
 1. VARCHAR(N) where N can be any number, it depends the clients requirements
