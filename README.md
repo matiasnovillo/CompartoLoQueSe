@@ -1,5 +1,18 @@
 # CompartoLoQueSe
 
+## ¿Qué es el tipo MIME de un archivo? (04/02/2021)
+Pregunta hecha en Quora y que respondi, la cual comparto por aca tambien.
+
+Hola, cómo te va?
+A esto del tipo/formato MIME lo vi en dos lugares: 1. En la transferencia de datos mediante el protocolo HTTP: Cuando entras a un sitio web, al servidor que contiene dicho sitio le estas solicitando el acceso, él, como respuesta te devuelve una serie de archivos, por ejemplo, si entro a Google buscando algo, este me devuelve los archivos que ves debajo, en la pestaña Network (Ctrl + Mayus + I para acceder).
+
+![MIME](https://botanicopadel.com/PublicSharing/MIME1.png)
+
+Como veras, el formato MIME esta especificado en la columna Type.
+Otro lugar donde lo he visto es en la configuracion de un servidor. Hay una seccion que dice transferencia de archivos, ahi debes especificar que formatos MIME queres proveer a tus usuarios (salida). Incluso creo que te deberia dejar configurar que formatos MIME pueden ser aceptados en las solicitudes de tus usuarios (entrada).
+
+Espero te sirva, saludos!
+
 ## ¿Qué debo saber antes del desarrollo web multiplataforma? (02/02/2021)
 Pregunta hecha en Quora y que respondi, la cual comparto por aca tambien.
 
